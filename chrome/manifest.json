@@ -3,7 +3,7 @@
     "action": {},
     "manifest_version": 3,
     "version": "1.0",
-    "description": "Extension to integrate Xtreme Download Manager with Chrome",
+    "description": "Download files with Xtreme Download Manager",
     "host_permissions": [
         "*://*/*"
     ],
