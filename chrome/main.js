@@ -10,6 +10,18 @@ export default class DownloadWatcher {
         this.fileExts = [];
     }
 
+    getActionIconName(icon) {
+        return this.enabled ? icon + ".png" : icon + "-mono.png";
+    }
+
+    getActionIcon() {
+        return {
+            "16": this.getActionIconName("icon16"),
+            "48": this.getActionIconName("icon48"),
+            "128": this.getActionIconName("icon128")
+        }
+    }
+
     onDeterminingFilename(download, suggest) {
         this.logger.log("onDeterminingFilename");
         this.logger.log(download);
@@ -29,17 +41,23 @@ export default class DownloadWatcher {
         this.logger.log(download);
     }
 
+    updateActionIcon() {
+        chrome.action.setIcon({ path: this.getActionIcon() });
+    }
+
     onMessage(msg) {
         this.logger.log(msg);
         this.enabled = msg.enabled;
         this.fileExts = msg.fileExts;
         this.blockedHosts = msg.blockedHosts;
+        this.updateActionIcon();
     }
 
     onDisconnect() {
         this.logger.log("Disconnected.");
         this.enabled = false;
         this.port = undefined;
+        this.updateActionIcon();
     }
 
     startNativeHost() {
