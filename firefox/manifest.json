@@ -1,0 +1,27 @@
+{
+    "name": "XDM Integration Module",
+    "browser_action": {},
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "Download files with Xtreme Download Manager",
+    "permissions": [
+        "downloads",
+        "tabs",
+        "nativeMessaging",
+        "cookies",
+        "*://*/*"
+    ],
+    "background": {
+        "page": "main.html"
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "applications": {
+        "gecko": {
+            "id": "browser-mon@xdman.sourceforge.net"
+        }
+    }
+}
