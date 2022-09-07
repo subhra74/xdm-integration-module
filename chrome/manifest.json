@@ -1,15 +1,14 @@
 {
-    "name": "XDM Integration Module",
+    "name": "XDM Integration Module BETA",
     "action": {},
     "manifest_version": 3,
-    "version": "1.0",
-    "description": "Download files with Xtreme Download Manager",
+    "version": "3.0",
+    "description": "Download files with Xtreme Download Manager. THIS EXTENSION IS FOR BETA TESTING",
     "host_permissions": [
         "*://*/*"
     ],
     "permissions": [
         "downloads",
-        "tabs",
         "nativeMessaging",
         "cookies"
     ],

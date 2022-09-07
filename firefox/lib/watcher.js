@@ -111,14 +111,13 @@ class DownloadWatcher {
                     fileSize: size,
                     mimeType: mime
                 };
-                console.log(data);
+				this.logger.log(data);
                 nativePort.postMessage(data);
             }
         });
     }
 
     diconnect() {
-        console.log(this.port);
         this.port && this.port.disconnect();
         this.onDisconnect();
     }

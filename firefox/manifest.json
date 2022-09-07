@@ -21,7 +21,7 @@
     },
     "applications": {
         "gecko": {
-            "id": "browser-mon@xdman.sourceforge.net"
+            "id": "xdm-integration-module@subhra74.github.io"
         }
     }
 }
